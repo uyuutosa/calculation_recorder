@@ -36,7 +36,7 @@ class CalculationRecorder:
             x = eval('x {} {}'.format(op, v))
         return x
 
-    def backword(self, x):
+    def backward(self, x):
         for v, op in zip(self.value_lst[::-1], self.op_lst[::-1]):
             x = eval('x {} {}'.format(self.inv_op[op], v))
         return x
